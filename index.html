@@ -56,13 +56,20 @@
     button:hover {
       background-color: #2980b9;
     }
+    /* Estilos para retroalimentación */
     .feedback {
       display: none;
       margin-top: 10px;
       padding: 10px;
+      border-radius: 4px;
+    }
+    .feedback.correct {
       background-color: #e8f4fd;
       border-left: 4px solid #3498db;
-      border-radius: 4px;
+    }
+    .feedback.incorrect {
+      background-color: #fce8e6;
+      border-left: 4px solid #ea4335;
     }
     .ethical-notice {
       font-size: 14px;
@@ -100,22 +107,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q1" value="A" required> 
+            <input type="radio" name="q1" value="A" required>
             A) Solo reemplaza a los docentes en todas las tareas académicas.
           </label>
           <label class="option">
-            <input type="radio" name="q1" value="B"> 
+            <input type="radio" name="q1" value="B">
             B) Mejora la eficiencia docente y la calidad del aprendizaje mediante herramientas que optimizan tareas y personalizan recursos.
           </label>
           <label class="option">
-            <input type="radio" name="q1" value="C"> 
+            <input type="radio" name="q1" value="C">
             C) Se limita a corregir exámenes de opción múltiple sin aportar valor pedagógico.
           </label>
         </div>
-        <div class="feedback" id="fb1">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>La IA no reemplaza al docente, sino que lo apoya. Permite optimizar tareas administrativas, personalizar materiales y mejorar la calidad del aprendizaje.</em>
-        </div>
+        <div class="feedback" id="fb1"></div>
       </div>
 
       <!-- Pregunta 2 -->
@@ -125,22 +129,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q2" value="A" required> 
+            <input type="radio" name="q2" value="A" required>
             A) Programas que almacenan información en la nube sin procesarla.
           </label>
           <label class="option">
-            <input type="radio" name="q2" value="B"> 
+            <input type="radio" name="q2" value="B">
             B) Sistemas informáticos que realizan tareas que normalmente requieren inteligencia humana, como analizar textos o tomar decisiones.
           </label>
           <label class="option">
-            <input type="radio" name="q2" value="C"> 
+            <input type="radio" name="q2" value="C">
             C) Robots físicos que enseñan en el aula sin intervención humana.
           </label>
         </div>
-        <div class="feedback" id="fb2">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>La IA simula capacidades humanas como el razonamiento, el análisis y la generación de contenido, pero no implica necesariamente robots ni reemplazo total del docente.</em>
-        </div>
+        <div class="feedback" id="fb2"></div>
       </div>
 
       <!-- Pregunta 3 -->
@@ -150,22 +151,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q3" value="A" required> 
+            <input type="radio" name="q3" value="A" required>
             A) Generación y personalización de materiales didácticos.
           </label>
           <label class="option">
-            <input type="radio" name="q3" value="B"> 
+            <input type="radio" name="q3" value="B">
             B) Automatización de evaluaciones y retroalimentación.
           </label>
           <label class="option">
-            <input type="radio" name="q3" value="C"> 
+            <input type="radio" name="q3" value="C">
             C) Diseño de uniformes escolares basados en tendencias de moda.
           </label>
         </div>
-        <div class="feedback" id="fb3">
-          ✅ <strong>Respuesta correcta: C</strong><br>
-          <em>Aunque la IA se usa en diseño, en el contexto educativo sus aplicaciones están enfocadas en mejora pedagógica, no en aspectos ajenos como la moda escolar.</em>
-        </div>
+        <div class="feedback" id="fb3"></div>
       </div>
 
       <!-- Pregunta 4 -->
@@ -175,22 +173,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q4" value="A" required> 
+            <input type="radio" name="q4" value="A" required>
             A) Escribir órdenes simples sin contexto para obtener cualquier respuesta de una IA.
           </label>
           <label class="option">
-            <input type="radio" name="q4" value="B"> 
+            <input type="radio" name="q4" value="B">
             B) El arte de crear instrucciones claras y estructuradas para obtener respuestas útiles de una IA generativa.
           </label>
           <label class="option">
-            <input type="radio" name="q4" value="C"> 
+            <input type="radio" name="q4" value="C">
             C) Programar una IA con código complejo para que funcione como un profesor virtual.
           </label>
         </div>
-        <div class="feedback" id="fb4">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>El prompting es clave para interactuar eficazmente con la IA. Depende de la claridad, contexto y especificidad del comando (prompt).</em>
-        </div>
+        <div class="feedback" id="fb4"></div>
       </div>
 
       <!-- Ejercicios de Prompting -->
@@ -203,22 +198,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="p1" value="A" required> 
+            <input type="radio" name="p1" value="A" required>
             A) "Resume el siguiente texto sobre física para estudiantes de preparatoria, destacando las ideas principales."
           </label>
           <label class="option">
-            <input type="radio" name="p1" value="B"> 
+            <input type="radio" name="p1" value="B">
             B) "Resume en 150 palabras el siguiente artículo sobre física, enfatizando los conceptos clave para estudiantes de nivel medio superior."
           </label>
           <label class="option">
-            <input type="radio" name="p1" value="C"> 
+            <input type="radio" name="p1" value="C">
             C) "Haz un resumen breve del texto sobre física, adaptado para jóvenes, usando un tono entretenido."
           </label>
         </div>
-        <div class="feedback" id="fbp1">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>La opción B es la más completa: define extensión (150 palabras), tema (física), audiencia (nivel medio superior) y propósito (conceptos clave). Aunque A y C son razonables, B ofrece mayor especificidad y contexto pedagógico.</em>
-        </div>
+        <div class="feedback" id="fbp1"></div>
       </div>
 
       <!-- Ejercicio 2 -->
@@ -228,22 +220,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="p2" value="A" required> 
+            <input type="radio" name="p2" value="A" required>
             A) "Crea un cuestionario de 5 preguntas de opción múltiple sobre ecuaciones cuadráticas para estudiantes de bachillerato, con retroalimentación breve para cada opción."
           </label>
           <label class="option">
-            <input type="radio" name="p2" value="B"> 
+            <input type="radio" name="p2" value="B">
             B) "Genera 5 preguntas difíciles de matemáticas sobre ecuaciones cuadráticas, con cuatro opciones cada una."
           </label>
           <label class="option">
-            <input type="radio" name="p2" value="C"> 
+            <input type="radio" name="p2" value="C">
             C) "Diseña un examen corto sobre ecuaciones cuadráticas, incluyendo preguntas abiertas y de opción múltiple."
           </label>
         </div>
-        <div class="feedback" id="fbp2">
-          ✅ <strong>Respuesta correcta: A</strong><br>
-          <em>La opción A especifica cantidad, tipo de pregunta, nivel, tema y lo más importante: incluye retroalimentación, un valor añadido clave en educación. B no define nivel adecuado ni retroalimentación. C es demasiado amplia y no garantiza coherencia.</em>
-        </div>
+        <div class="feedback" id="fbp2"></div>
       </div>
 
       <!-- Ejercicio 3 -->
@@ -253,22 +242,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="p3" value="A" required> 
+            <input type="radio" name="p3" value="A" required>
             A) "Adapta el siguiente texto sobre el cambio climático a un nivel de comprensión adecuado para estudiantes de 16 años, usando lenguaje claro y ejemplos cotidianos."
           </label>
           <label class="option">
-            <input type="radio" name="p3" value="B"> 
+            <input type="radio" name="p3" value="B">
             B) "Simplifica este texto sobre el cambio climático para que sea más fácil de entender."
           </label>
           <label class="option">
-            <input type="radio" name="p3" value="C"> 
+            <input type="radio" name="p3" value="C">
             C) "Parafrasea el texto sobre el cambio climático usando palabras más sencillas, sin cambiar el significado."
           </label>
         </div>
-        <div class="feedback" id="fbp3">
-          ✅ <strong>Respuesta correcta: A</strong><br>
-          <em>La opción A define claramente el público (16 años), el estilo deseado (lenguaje claro, ejemplos cotidianos) y el objetivo (comprensión). B y C son vagas: 'más fácil' o 'palabras sencillas' no garantizan una adaptación pedagógica efectiva.</em>
-        </div>
+        <div class="feedback" id="fbp3"></div>
       </div>
 
       <!-- Ejercicio 4 -->
@@ -278,22 +264,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="p4" value="A" required> 
+            <input type="radio" name="p4" value="A" required>
             A) "Crea una presentación de 8 diapositivas sobre la Revolución Industrial para estudiantes de historia, con mapas conceptuales, imágenes sugeridas y puntos clave por diapositiva."
           </label>
           <label class="option">
-            <input type="radio" name="p4" value="B"> 
+            <input type="radio" name="p4" value="B">
             B) "Diseña una presentación visual atractiva sobre la Revolución Industrial, con buen diseño y contenido interesante."
           </label>
           <label class="option">
-            <input type="radio" name="p4" value="C"> 
+            <input type="radio" name="p4" value="C">
             C) "Haz una presentación de 6 a 10 diapositivas sobre la Revolución Industrial, enfocada en aspectos económicos y sociales."
           </label>
         </div>
-        <div class="feedback" id="fbp4">
-          ✅ <strong>Respuesta correcta: A</strong><br>
-          <em>La opción A es la más estructurada: define número exacto de diapositivas, contenido clave, elementos visuales (mapas, imágenes) y público. B es subjetiva ('atractiva', 'interesante'). C es flexible en formato y omite recursos visuales.</em>
-        </div>
+        <div class="feedback" id="fbp4"></div>
       </div>
 
       <!-- Ejercicio 5 -->
@@ -303,22 +286,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="p5" value="A" required> 
+            <input type="radio" name="p5" value="A" required>
             A) "Genera una secuencia didáctica de 3 sesiones para enseñar 'la célula' a estudiantes de primer año de bachillerato, con objetivos de aprendizaje, actividades colaborativas y una evaluación formativa."
           </label>
           <label class="option">
-            <input type="radio" name="p5" value="B"> 
+            <input type="radio" name="p5" value="B">
             B) "Diseña un plan de clase sobre la célula para estudiantes de bachillerato, con una actividad y una evaluación final."
           </label>
           <label class="option">
-            <input type="radio" name="p5" value="C"> 
+            <input type="radio" name="p5" value="C">
             C) "Crea una secuencia de aprendizaje sobre la célula que incluya lecturas, videos y una prueba escrita."
           </label>
         </div>
-        <div class="feedback" id="fbp5">
-          ✅ <strong>Respuesta correcta: A</strong><br>
-          <em>La opción A estructura claramente el tiempo (3 sesiones), nivel, y pide elementos clave: objetivos, actividades colaborativas y evaluación formativa. B es muy general. C menciona recursos, pero no define objetivos ni tipo de evaluación formativa.</em>
-        </div>
+        <div class="feedback" id="fbp5"></div>
       </div>
 
       <!-- Pregunta 5 -->
@@ -328,22 +308,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q5" value="A" required> 
+            <input type="radio" name="q5" value="A" required>
             A) Mapas conceptuales, presentaciones y cuestionarios automatizados.
           </label>
           <label class="option">
-            <input type="radio" name="q5" value="B"> 
+            <input type="radio" name="q5" value="B">
             B) Libros impresos sin revisión humana.
           </label>
           <label class="option">
-            <input type="radio" name="q5" value="C"> 
+            <input type="radio" name="q5" value="C">
             C) Uniformes escolares inteligentes con IA integrada.
           </label>
         </div>
-        <div class="feedback" id="fb5">
-          ✅ <strong>Respuesta correcta: A</strong><br>
-          <em>La IA permite generar materiales visuales, bancos de preguntas y adaptar contenidos. Las opciones B y C exageran o descontextualizan el uso real de la IA en aulas.</em>
-        </div>
+        <div class="feedback" id="fb5"></div>
       </div>
 
       <!-- Pregunta 6 -->
@@ -353,22 +330,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="q6" value="A" required> 
+            <input type="radio" name="q6" value="A" required>
             A) Elimina completamente la necesidad de docentes en el proceso educativo.
           </label>
           <label class="option">
-            <input type="radio" name="q6" value="B"> 
+            <input type="radio" name="q6" value="B">
             B) Permite calificar exámenes y dar retroalimentación rápida, además de analizar resultados para personalizar el aprendizaje.
           </label>
           <label class="option">
-            <input type="radio" name="q6" value="C"> 
+            <input type="radio" name="q6" value="C">
             C) Solo funciona con exámenes de matemáticas y ciencias.
           </label>
         </div>
-        <div class="feedback" id="fb6">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>La IA acelera la calificación y mejora la retroalimentación, liberando tiempo al docente para tareas más significativas. No reemplaza, sino que complementa su labor.</em>
-        </div>
+        <div class="feedback" id="fb6"></div>
       </div>
 
       <!-- Casos Éticos -->
@@ -382,22 +356,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="e1" value="A" required> 
+            <input type="radio" name="e1" value="A" required>
             A) Promoción del pensamiento crítico.
           </label>
           <label class="option">
-            <input type="radio" name="e1" value="B"> 
+            <input type="radio" name="e1" value="B">
             B) Responsabilidad en el uso de IA: el docente debe revisar y validar los resultados.
           </label>
           <label class="option">
-            <input type="radio" name="e1" value="C"> 
+            <input type="radio" name="e1" value="C">
             C) Automatización total del proceso educativo.
           </label>
         </div>
-        <div class="feedback" id="fbe1">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>El docente es responsable final del proceso. La IA asiste, pero no exime de verificar la pertinencia y calidad de sus salidas.</em>
-        </div>
+        <div class="feedback" id="fbe1"></div>
       </div>
 
       <!-- Caso 2 -->
@@ -408,22 +379,19 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="e2" value="A" required> 
+            <input type="radio" name="e2" value="A" required>
             A) Que la IA se sobrecargue.
           </label>
           <label class="option">
-            <input type="radio" name="e2" value="B"> 
+            <input type="radio" name="e2" value="B">
             B) Vulneración de la privacidad y protección de datos personales de los estudiantes.
           </label>
           <label class="option">
-            <input type="radio" name="e2" value="C"> 
+            <input type="radio" name="e2" value="C">
             C) Que los estudiantes obtengan mejores calificaciones.
           </label>
         </div>
-        <div class="feedback" id="fbe2">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>Compartir datos sensibles sin consentimiento viola principios de privacidad. Los datos educativos deben manejarse con confidencialidad.</em>
-        </div>
+        <div class="feedback" id="fbe2"></div>
       </div>
 
       <!-- Caso 3 -->
@@ -434,28 +402,25 @@
         </div>
         <div class="options">
           <label class="option">
-            <input type="radio" name="e3" value="A" required> 
+            <input type="radio" name="e3" value="A" required>
             A) Mejora automática del clima escolar.
           </label>
           <label class="option">
-            <input type="radio" name="e3" value="B"> 
+            <input type="radio" name="e3" value="B">
             B) Pérdida de la creatividad, el juicio profesional y el pensamiento crítico del docente.
           </label>
           <label class="option">
-            <input type="radio" name="e3" value="C"> 
+            <input type="radio" name="e3" value="C">
             C) Mayor motivación estudiantil por el uso de tecnología.
           </label>
         </div>
-        <div class="feedback" id="fbe3">
-          ✅ <strong>Respuesta correcta: B</strong><br>
-          <em>La IA debe ser una herramienta de apoyo, no un sustituto del diseño pedagógico humano, que incluye empatía, contexto y adaptación.</em>
-        </div>
+        <div class="feedback" id="fbe3"></div>
       </div>
 
       <!-- Aviso ético -->
       <div class="ethical-notice">
-        <strong>Aviso ético:</strong> Esta aplicación recopila respuestas con fines exclusivamente <strong>educativos y de investigación</strong>. 
-        Los datos serán tratados de forma anónima o bajo consentimiento informado, garantizando la <strong>confidencialidad, privacidad y uso responsable</strong> conforme a principios éticos en investigación educativa. 
+        <strong>Aviso ético:</strong> Esta aplicación recopila respuestas con fines exclusivamente <strong>educativos y de investigación</strong>.
+        Los datos serán tratados de forma anónima o bajo consentimiento informado, garantizando la <strong>confidencialidad, privacidad y uso responsable</strong> conforme a principios éticos en investigación educativa.
         En ningún caso se compartirán datos personales sin autorización. El uso de esta herramienta implica aceptación de estos términos.
       </div>
 
@@ -466,20 +431,103 @@
     <!-- Pantalla de reporte -->
     <div id="reportScreen" class="hidden">
       <h2>✅ ¡Pretest completado!</h2>
-      <p>A continuación, puedes generar tu reporte de respuestas para análisis educativo.</p>
-      <p><strong>Nota:</strong> Este reporte se enviará a través de Google Forms a una carpeta segura para su uso académico.</p>
-      <button class="report-btn" id="sendReportBtn">📤 Enviar Reporte a Google Drive</button>
+      <p>Gracias por completar el pretest. Tus respuestas se están procesando...</p>
       <div id="resultSummary" style="margin-top: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px;"></div>
+      <!-- El botón de enviar ya no es necesario, el envío será automático -->
+      <div id="statusMessage" style="margin-top: 20px; padding: 15px; border-radius: 8px;"></div>
     </div>
   </div>
 
   <script>
+    // Mapa de respuestas correctas
+    const correctasMap = {
+      q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'A', q6: 'B',
+      p1: 'B', p2: 'A', p3: 'A', p4: 'A', p5: 'A',
+      e1: 'B', e2: 'B', e3: 'B'
+    };
+
+    // Mapa de explicaciones para cada pregunta
+    const explicacionesMap = {
+      q1: {
+        B: "La IA no reemplaza al docente, sino que lo apoya. Permite optimizar tareas administrativas, personalizar materiales y mejorar la calidad del aprendizaje.",
+        A: "Esta opción es incorrecta porque la IA no reemplaza al docente en todas las tareas, sino que lo asiste en muchas de ellas.",
+        C: "Esta opción subestima el potencial de la IA en educación, que va mucho más allá de la simple corrección de exámenes."
+      },
+      q2: {
+        B: "La IA simula capacidades humanas como el razonamiento, el análisis y la generación de contenido, pero no implica necesariamente robots ni reemplazo total del docente.",
+        A: "Esta opción es muy limitada. La IA no solo almacena información, sino que la procesa y analiza para generar resultados.",
+        C: "Aunque existen robots educativos, la definición de IA es más amplia y no se limita a estos dispositivos físicos."
+      },
+      q3: {
+        C: "Aunque la IA se usa en diseño, en el contexto educativo sus aplicaciones están enfocadas en mejora pedagógica, no en aspectos ajenos como la moda escolar.",
+        A: "Esta opción es una aplicación real de la IA en educación, por lo que no es la respuesta correcta a esta pregunta.",
+        B: "Esta opción también es una aplicación real de la IA en educación, por lo que no es la respuesta correcta a esta pregunta."
+      },
+      q4: {
+        B: "El prompting es clave para interactuar eficazmente con la IA. Depende de la claridad, contexto y especificidad del comando (prompt).",
+        A: "Esta descripción es muy general y omite la importancia de la estructura y el contexto en un buen prompt.",
+        C: "El prompting se refiere a cómo interactuamos con la IA, no a programarla desde cero."
+      },
+      p1: {
+        B: "La opción B es la más completa: define extensión (150 palabras), tema (física), audiencia (nivel medio superior) y propósito (conceptos clave). Aunque A y C son razonables, B ofrece mayor especificidad y contexto pedagógico.",
+        A: "Esta opción es buena, pero no especifica la extensión ni el enfoque en conceptos clave, elementos importantes para una guía clara.",
+        C: "Aunque menciona adaptar para jóvenes, prioriza el 'tono entretenido' sobre la precisión y claridad pedagógica."
+      },
+      p2: {
+        A: "La opción A especifica cantidad, tipo de pregunta, nivel, tema y lo más importante: incluye retroalimentación, un valor añadido clave en educación. B no define nivel adecuado ni retroalimentación. C es demasiado amplia y no garantiza coherencia.",
+        B: "Esta opción enfatiza la dificultad pero no especifica el nivel educativo ni incluye retroalimentación, aspectos importantes para la enseñanza.",
+        C: "Esta opción es muy general en cuanto al formato y no especifica el tipo de preguntas ni la inclusión de retroalimentación."
+      },
+      p3: {
+        A: "La opción A define claramente el público (16 años), el estilo deseado (lenguaje claro, ejemplos cotidianos) y el objetivo (comprensión). B y C son vagas: 'más fácil' o 'palabras sencillas' no garantizan una adaptación pedagógica efectiva.",
+        B: "Simplificar no siempre significa adaptar. Esta opción no especifica cómo se debe hacer la simplificación ni para qué nivel.",
+        C: "Parafrasear no es lo mismo que adaptar. Esta opción no garantiza que el resultado sea comprensible para el nivel adecuado."
+      },
+      p4: {
+        A: "La opción A es la más estructurada: define número exacto de diapositivas, contenido clave, elementos visuales (mapas, imágenes) y público. B es subjetiva ('atractiva', 'interesante'). C es flexible en formato y omite recursos visuales.",
+        B: "Esta opción es muy subjetiva. 'Atractiva' y 'interesante' no son instrucciones claras para la IA.",
+        C: "Aunque define un rango de diapositivas y un tema, no especifica recursos visuales ni puntos clave por diapositiva."
+      },
+      p5: {
+        A: "La opción A estructura claramente el tiempo (3 sesiones), nivel, y pide elementos clave: objetivos, actividades colaborativas y evaluación formativa. B es muy general. C menciona recursos, pero no define objetivos ni tipo de evaluación formativa.",
+        B: "Esta opción es muy general y no incluye elementos clave como objetivos de aprendizaje o evaluación formativa.",
+        C: "Menciona recursos, pero no define una estructura clara ni objetivos de aprendizaje."
+      },
+      q5: {
+        A: "La IA permite generar materiales visuales, bancos de preguntas y adaptar contenidos. Las opciones B y C exageran o descontextualizan el uso real de la IA en aulas.",
+        B: "La IA puede ayudar en la creación, pero la revisión humana es fundamental para garantizar la calidad.",
+        C: "Este es un uso muy específico y no común de la IA en el contexto educativo actual."
+      },
+      q6: {
+        B: "La IA acelera la calificación y mejora la retroalimentación, liberando tiempo al docente para tareas más significativas. No reemplaza, sino que complementa su labor.",
+        A: "Esta opción es incorrecta porque la IA no elimina la necesidad del docente, sino que lo asiste.",
+        C: "La evaluación automatizada con IA puede aplicarse a una amplia variedad de materias, no solo a matemáticas y ciencias."
+      },
+      e1: {
+        B: "El docente es responsable final del proceso. La IA asiste, pero no exime de verificar la pertinencia y calidad de sus salidas.",
+        A: "Aunque la revisión es importante para el pensamiento crítico, el principio ético violado aquí es la responsabilidad del docente.",
+        C: "La automatización no es necesariamente un problema ético en sí misma, el problema es no revisar los resultados."
+      },
+      e2: {
+        B: "Compartir datos sensibles sin consentimiento viola principios de privacidad. Los datos educativos deben manejarse con confidencialidad.",
+        A: "Aunque es posible que la IA se sature, el riesgo principal es la vulneración de la privacidad.",
+        C: "La posibilidad de mejores calificaciones no es el riesgo principal de compartir datos sin consentimiento."
+      },
+      e3: {
+        B: "La IA debe ser una herramienta de apoyo, no un sustituto del diseño pedagógico humano, que incluye empatía, contexto y adaptación.",
+        A: "No hay garantía de que la automatización total mejore automáticamente el clima escolar.",
+        C: "La motivación estudiantil depende de muchos factores, no solo del uso de tecnología."
+      }
+    };
+
     // Mostrar retroalimentación inmediata al seleccionar
     document.querySelectorAll('input[type="radio"]').forEach(input => {
       input.addEventListener('change', function () {
         const name = this.name;
         let feedbackId;
+        let feedbackElement;
 
+        // Determinar el ID del feedback correspondiente
         if (name.startsWith('q')) {
           feedbackId = `fb${name.slice(1)}`;
         } else if (name.startsWith('p')) {
@@ -488,18 +536,37 @@
           feedbackId = `fbe${name.slice(1)}`;
         }
 
+        feedbackElement = document.getElementById(feedbackId);
+
+        // Ocultar todos los feedbacks
         document.querySelectorAll('.feedback').forEach(el => {
           el.style.display = 'none';
+          el.className = 'feedback'; // Resetear clases
         });
 
-        if (feedbackId && document.getElementById(feedbackId)) {
-          document.getElementById(feedbackId).style.display = 'block';
+        if (feedbackElement) {
+          const selectedValue = this.value;
+          const correctValue = correctasMap[name];
+          const explicaciones = explicacionesMap[name];
+
+          let feedbackHTML = '';
+
+          if (selectedValue === correctValue) {
+            feedbackElement.classList.add('correct');
+            feedbackHTML = `<strong>✅ Respuesta correcta:</strong> ${explicaciones[selectedValue] || ''}`;
+          } else {
+            feedbackElement.classList.add('incorrect');
+            feedbackHTML = `<strong>❌ Respuesta incorrecta.</strong> La opción correcta es: <strong>${correctValue}</strong>.<br><em>${explicaciones[correctValue] || ''}</em>`;
+          }
+
+          feedbackElement.innerHTML = feedbackHTML;
+          feedbackElement.style.display = 'block';
         }
       });
     });
 
-    // Generar reporte y mostrar resumen
-    function mostrarReporte() {
+    // Generar reporte, mostrar resumen y ENVIAR DATOS
+    async function mostrarReporte() {
       const form = document.getElementById('pretestForm');
       if (!form.checkValidity()) {
         alert("Por favor, responde todas las preguntas.");
@@ -513,39 +580,53 @@
       // Calcular resumen
       const respuestas = new FormData(form);
       let correctas = 0;
-      const total = 14; // 6 preguntas + 5 prompts + 3 casos
+      const total = Object.keys(correctasMap).length;
 
-      // Respuestas correctas
-      const correctasMap = {
-        q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'A', q6: 'B',
-        p1: 'B', p2: 'A', p3: 'A', p4: 'A', p5: 'A',
-        e1: 'B', e2: 'B', e3: 'B'
-      };
-
+      // Convertir FormData a un objeto simple para enviar
+      const datosParaEnviar = {};
       for (let [key, value] of respuestas) {
+        datosParaEnviar[key] = value;
         if (correctasMap[key] === value) correctas++;
       }
 
       const porcentaje = Math.round((correctas / total) * 100);
+      datosParaEnviar['porcentaje'] = porcentaje; // Agregar el porcentaje calculado
 
       document.getElementById('resultSummary').innerHTML = `
         <strong>Resumen de respuestas:</strong><br>
         Preguntas correctas: ${correctas} de ${total}<br>
         Porcentaje: ${porcentaje}%<br><br>
-        <em>Este reporte puede usarse para comparar con el postest y evaluar el impacto del taller.</em>
+        <em>Enviando tus respuestas para análisis...</em>
       `;
 
-      // Enlace al Google Form (reemplaza con tu URL real)
-      const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfYOUR_FORM_ID_HERE/viewform";
-      let url = FORM_URL;
+      // --- NUEVO: ENVIAR DATOS A GOOGLE APPS SCRIPT ---
+      const statusDiv = document.getElementById('statusMessage');
+      try {
+        // *** URL DE LA WEB APP DE GOOGLE APPS SCRIPT ***
+        const response = await fetch('https://script.google.com/macros/s/AKfycby1_cC6bAp7flLqFjMJXlrlBWL-iU9gSke50QihMdHM0ey24VxraSRx114qG9J16WEo/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          // mode: 'no-cors', // NO es necesario si la Web App está configurada correctamente
+          body: JSON.stringify(datosParaEnviar),
+        });
 
-      // Opcional: prellenar respuestas si el formulario lo permite (usando entry.xxxxx)
-      // Debes configurar tu Google Form y obtener los IDs de cada campo
-
-      document.getElementById('sendReportBtn').onclick = () => {
-        window.open(url, "_blank");
-      };
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Respuesta del servidor:", result); // Para depuración
+          statusDiv.innerHTML = `<p style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">✅ Tus respuestas han sido enviadas y registradas correctamente. Gracias por tu participación.</p>`;
+          // Opcional: Puedes mostrar un mensaje de agradecimiento o redirigir
+        } else {
+          throw new Error('Error en la respuesta del servidor: ' + response.status);
+        }
+      } catch (error) {
+        console.error('Error al enviar datos:', error);
+        statusDiv.innerHTML = `<p style="background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;">❌ Hubo un problema al enviar tus respuestas. Por favor, inténtalo de nuevo más tarde. (${error.message})</p>`;
+      }
+      // --- FIN DEL ENVÍO ---
     }
+
   </script>
 </body>
 </html>
